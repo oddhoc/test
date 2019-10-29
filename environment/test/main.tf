@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     #bucket         = "dsva-shared-terraform-remote-state" # prod govcloud
     bucket         = "dsva-shared-terraform-remote-state-testgovcloud" # test-govcloud
-    key            = "terraform.tfstate.dsva-global"
+    key            = "terraform.tfstate.dsva-global-atlantis-test"
     dynamodb_table = "dsva-shared-terraform-lock"
     region         = "us-gov-west-1"
     encrypt        = true
