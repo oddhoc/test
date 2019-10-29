@@ -1,0 +1,5 @@
+version: 3
+projects:
+  - dir: environment/test
+    autoplan:
+      when_modified: ["../../modules/s3-bucket/**/*.tf", "*.tf*"
