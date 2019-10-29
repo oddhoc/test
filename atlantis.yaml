@@ -1,5 +1,8 @@
 version: 3
 projects:
-  - dir: environment/test
+  - name: test
+    dir: environment/test
     autoplan:
-      when_modified: ["../../modules/s3-bucket/**/*.tf", "*.tf*"]
+      when_modified: ["*.tf", "../../modules/s3-bucket/**/*.tf"]
+      enabled: true
+    apply_requirements: [mergeable, approved]
