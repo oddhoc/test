@@ -1,7 +1,19 @@
 version: 3
 projects:
-  - name: test
-    dir: environment/test
-    autoplan:
-      when_modified: ["*.tf", "../../modules/s3-bucket/**/*.tf"]
-      enabled: true
+- name: test
+  dir: environment/test
+  autoplan:
+    when_modified: ["*.tf", "../../modules/s3-bucket/**/*.tf"]
+    enabled: true
+  workflow: atlantis
+workflows:
+  atlantis:
+    plan:
+      steps:
+      - fmt
+      - init
+      - validate
+      - plan
+    apply:
+      steps:
+      - apply
