@@ -5,4 +5,3 @@ projects:
     autoplan:
       when_modified: ["*.tf", "../../modules/s3-bucket/**/*.tf"]
       enabled: true
-    apply_requirements: [mergeable, approved]
