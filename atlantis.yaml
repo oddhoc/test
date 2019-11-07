@@ -10,10 +10,11 @@ workflows:
   atlantis:
     plan:
       steps:
-      - fmt
+      - run: terraform fmt
       - init
-      - validate
-      - plan
+      - run: terraform validate
+      - plan:
+          extra_args: ["-lock","false"]
     apply:
       steps:
       - apply
