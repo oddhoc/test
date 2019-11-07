@@ -13,8 +13,7 @@ workflows:
       - run: terraform fmt
       - init
       - run: terraform validate
-      - plan:
-          extra_args: ["-lock", "false"]
+      - plan
     apply:
       steps:
       - apply
