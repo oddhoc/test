@@ -1,0 +1,8 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence
+*       @oddhoc/oddhoc-all-members
+/ansible/build/api-gateway/      @oddhoc/test-users
+/tf/envs/dvp*      @oddhoc/test-users
+/tf/envs/dvp*/      @oddhoc/test-users
+/ansible/deployment/dsva*/      @oddhoc/oddhoc-all-members
+/ansible/deployment/dvp*/      @oddhoc/test-users
