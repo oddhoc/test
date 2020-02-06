@@ -1,4 +1,5 @@
 *.rbc
+!.github
 capybara-*.html
 .rspec
 /log
